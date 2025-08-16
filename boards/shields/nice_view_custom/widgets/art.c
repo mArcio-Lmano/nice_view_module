@@ -12,8 +12,6 @@
 #define LV_ATTRIBUTE_MEM_ALIGN
 #endif
 
-#endif
-
 #ifndef LV_ATTRIBUTE_IMG_IMAGE
 #define LV_ATTRIBUTE_IMG_IMAGE
 #endif
