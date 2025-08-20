@@ -23,10 +23,8 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
-LV_IMG_DECLARE(balloon);
-LV_IMG_DECLARE(mountain);
-LV_IMG_DECLARE(image);
 LV_IMG_DECLARE(love);
+LV_IMG_DECLARE(sunflower);
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
@@ -128,7 +126,7 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 
   lv_obj_t *art = lv_img_create(widget->obj);
   bool random = sys_rand32_get() & 1;
-  lv_img_set_src(art, random ? &image : &love);
+  lv_img_set_src(art, random ? &sunflower : &love);
   // lv_img_set_src(art, &image);
   lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
 
